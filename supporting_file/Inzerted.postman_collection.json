@@ -1,0 +1,336 @@
+{
+	"info": {
+		"_postman_id": "2cea4108-342b-4728-bc17-2c21b3b7b252",
+		"name": "Inzerted",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login API",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "Gtrt7WEiwM@user.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User API [Final]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWYyMDY0OWVjNDVkMzliOGFkMGRlYjE2NThmZTgxOGM5NzYxNTE4NzYwNzM4YTU5ZmQ5NmJmNGZiZGE1ZGQ5ZjgyNjU2ZDBjODIyODNjNWIiLCJpYXQiOjE1OTQzNzY2OTIsIm5iZiI6MTU5NDM3NjY5MiwiZXhwIjoxNjI1OTEyNjkyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.DG2rEUoTguAn1nxrR45-NFHxipOSrGoNmza7VwRaMNKSi7bxnELzB6e9Gx-ICQjxVsIWBLabA5usSN7scmjYtiHrg9mxDDRMNNtsZZRX9VrmvgRhH_35gngIdvayRsvoKDisHFDbfMOm2ZNMecU9GWaFvPle_5_Xc7OcQhBjCmTK8W1lteISdC3KL4maVK9NiiXEvp5ikwLi1QOHQYw63MV5jzEvK6dYt3swOo4M9pRUFVUXuiEj4fGJEHhJFOx-_rQ8BviPto8ae_Pxiz5jOJXvcejepxOeJN4CqegG8iCG9-5vqcVejWBKcte1Ex1HSk3NmZfP57rpN8zInyVarVX2C2K5x4ayxyUyeIM_20GRCs_fJvtkEno2mKj3VkNiAuyuam6_SNN4zUQi7erEdYTIjQf9J7p8GPIUSofhe9BldVfWzLQiGsUeaPxyZH2ZgIOMG6thR39xwJCS-N6x-7yB-n4UzfsxGEkILmKJmVrIvUpASD8K5DMV6NLKsvJfgBCDS3V9laHA4AvLKouSzbDZocHYPsdFTHuODQ8FmpbgmYE8CdFXY3aI-2jcSDAMhpR1R2tvxRnhLDs1MXnN48Sxn4gJU1A33FwQwqpQlFa_p_R_83xkbAX0Om4DwRgfB9JKB4kr-Y11UfiwkcnZwTmYehtmuaML9RMoj6ffySU"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "ab@admin.check",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123123",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "test check",
+							"type": "text"
+						},
+						{
+							"key": "is_admin",
+							"value": "0",
+							"description": "Optional value should be 1 or 0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit User [Final]",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWYyMDY0OWVjNDVkMzliOGFkMGRlYjE2NThmZTgxOGM5NzYxNTE4NzYwNzM4YTU5ZmQ5NmJmNGZiZGE1ZGQ5ZjgyNjU2ZDBjODIyODNjNWIiLCJpYXQiOjE1OTQzNzY2OTIsIm5iZiI6MTU5NDM3NjY5MiwiZXhwIjoxNjI1OTEyNjkyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.DG2rEUoTguAn1nxrR45-NFHxipOSrGoNmza7VwRaMNKSi7bxnELzB6e9Gx-ICQjxVsIWBLabA5usSN7scmjYtiHrg9mxDDRMNNtsZZRX9VrmvgRhH_35gngIdvayRsvoKDisHFDbfMOm2ZNMecU9GWaFvPle_5_Xc7OcQhBjCmTK8W1lteISdC3KL4maVK9NiiXEvp5ikwLi1QOHQYw63MV5jzEvK6dYt3swOo4M9pRUFVUXuiEj4fGJEHhJFOx-_rQ8BviPto8ae_Pxiz5jOJXvcejepxOeJN4CqegG8iCG9-5vqcVejWBKcte1Ex1HSk3NmZfP57rpN8zInyVarVX2C2K5x4ayxyUyeIM_20GRCs_fJvtkEno2mKj3VkNiAuyuam6_SNN4zUQi7erEdYTIjQf9J7p8GPIUSofhe9BldVfWzLQiGsUeaPxyZH2ZgIOMG6thR39xwJCS-N6x-7yB-n4UzfsxGEkILmKJmVrIvUpASD8K5DMV6NLKsvJfgBCDS3V9laHA4AvLKouSzbDZocHYPsdFTHuODQ8FmpbgmYE8CdFXY3aI-2jcSDAMhpR1R2tvxRnhLDs1MXnN48Sxn4gJU1A33FwQwqpQlFa_p_R_83xkbAX0Om4DwRgfB9JKB4kr-Y11UfiwkcnZwTmYehtmuaML9RMoj6ffySU"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "xxxrry",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "xy@x.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123123",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User [Final]",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNzZmZWVhOTcwNWI0ODk4NTE5MDZjYzJkMDI4ODU0ZDMwZjI3MjA3M2JkOWNjZDg0NmVkNmU3ZDI2OWQ0ODFjMzQ1ZjczYzJhOWNkZjQxMmIiLCJpYXQiOjE1OTQzNzAxMzAsIm5iZiI6MTU5NDM3MDEzMCwiZXhwIjoxNjI1OTA2MTMwLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.olqJCEJ8f1R0MOxVdeOa-zSy0uRBgvKY9FR4RszgHdfbYmX1CySV3ny53u0ccb7Upv7XAowlAmqNwx3YMQJefIKZdBjh-RL0D30udDySZpegI5IY3XT7-wJaZVl85XB7pbfb6POz2qoxGLo2fs1V1KcGTLXJt4uHe_DvGfHUwDf45KAei99wUkvMoMHy0V-41FGu-1vUGBt9o2IFaNlcqk3mOQhNkbNR1Bh_3pm3Fv_n3baJMoHtQX-nsAlOYTZBZogiTkPqs6eiqvv0lj6VbQxIMC51KPbJ7Bvaaq2QSVj7b-liDvtTMdkkfQLabW6DU7ggCpYY1n3U0OTlQXQPYQ3pwkl4_wrgj6GBEzsKoXMIIfZM-MJE_fv9D4micEw-RpGKKANOdBiMg0SeVhw6oAl1Sgh2O2mjiGpiBqlwo463qHJa7kl_5x6Qo05E9v-g_336U3NI32PjHiGBe5ZIAK0sMBEl7yFkHXYHGFp6lFVs-tX21giONyPsmLxz_p2kVpLmz56GXvM3jw_WCkJhECMzgblvFkNr--egFi7iJr0CKw9g1QFLtntlZGZVw6fBPTiTi9WIfG_oLGKVESw3dAXpuaY5xwutxiH-eCqFf1uT6Re_BCzTo2qt4o7X-PBfi_fLMSeRgXjxGe-UCuBnE2n0JXM_-MsRmfeG2bdGf48"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/users/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Project [Final]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNzZmZWVhOTcwNWI0ODk4NTE5MDZjYzJkMDI4ODU0ZDMwZjI3MjA3M2JkOWNjZDg0NmVkNmU3ZDI2OWQ0ODFjMzQ1ZjczYzJhOWNkZjQxMmIiLCJpYXQiOjE1OTQzNzAxMzAsIm5iZiI6MTU5NDM3MDEzMCwiZXhwIjoxNjI1OTA2MTMwLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.olqJCEJ8f1R0MOxVdeOa-zSy0uRBgvKY9FR4RszgHdfbYmX1CySV3ny53u0ccb7Upv7XAowlAmqNwx3YMQJefIKZdBjh-RL0D30udDySZpegI5IY3XT7-wJaZVl85XB7pbfb6POz2qoxGLo2fs1V1KcGTLXJt4uHe_DvGfHUwDf45KAei99wUkvMoMHy0V-41FGu-1vUGBt9o2IFaNlcqk3mOQhNkbNR1Bh_3pm3Fv_n3baJMoHtQX-nsAlOYTZBZogiTkPqs6eiqvv0lj6VbQxIMC51KPbJ7Bvaaq2QSVj7b-liDvtTMdkkfQLabW6DU7ggCpYY1n3U0OTlQXQPYQ3pwkl4_wrgj6GBEzsKoXMIIfZM-MJE_fv9D4micEw-RpGKKANOdBiMg0SeVhw6oAl1Sgh2O2mjiGpiBqlwo463qHJa7kl_5x6Qo05E9v-g_336U3NI32PjHiGBe5ZIAK0sMBEl7yFkHXYHGFp6lFVs-tX21giONyPsmLxz_p2kVpLmz56GXvM3jw_WCkJhECMzgblvFkNr--egFi7iJr0CKw9g1QFLtntlZGZVw6fBPTiTi9WIfG_oLGKVESw3dAXpuaY5xwutxiH-eCqFf1uT6Re_BCzTo2qt4o7X-PBfi_fLMSeRgXjxGe-UCuBnE2n0JXM_-MsRmfeG2bdGf48"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "wwq",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "yy",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "1",
+							"description": " this field only be taken if user is admin otherwise ignored",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/projects",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"projects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Project [Final]",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNzZmZWVhOTcwNWI0ODk4NTE5MDZjYzJkMDI4ODU0ZDMwZjI3MjA3M2JkOWNjZDg0NmVkNmU3ZDI2OWQ0ODFjMzQ1ZjczYzJhOWNkZjQxMmIiLCJpYXQiOjE1OTQzNzAxMzAsIm5iZiI6MTU5NDM3MDEzMCwiZXhwIjoxNjI1OTA2MTMwLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.olqJCEJ8f1R0MOxVdeOa-zSy0uRBgvKY9FR4RszgHdfbYmX1CySV3ny53u0ccb7Upv7XAowlAmqNwx3YMQJefIKZdBjh-RL0D30udDySZpegI5IY3XT7-wJaZVl85XB7pbfb6POz2qoxGLo2fs1V1KcGTLXJt4uHe_DvGfHUwDf45KAei99wUkvMoMHy0V-41FGu-1vUGBt9o2IFaNlcqk3mOQhNkbNR1Bh_3pm3Fv_n3baJMoHtQX-nsAlOYTZBZogiTkPqs6eiqvv0lj6VbQxIMC51KPbJ7Bvaaq2QSVj7b-liDvtTMdkkfQLabW6DU7ggCpYY1n3U0OTlQXQPYQ3pwkl4_wrgj6GBEzsKoXMIIfZM-MJE_fv9D4micEw-RpGKKANOdBiMg0SeVhw6oAl1Sgh2O2mjiGpiBqlwo463qHJa7kl_5x6Qo05E9v-g_336U3NI32PjHiGBe5ZIAK0sMBEl7yFkHXYHGFp6lFVs-tX21giONyPsmLxz_p2kVpLmz56GXvM3jw_WCkJhECMzgblvFkNr--egFi7iJr0CKw9g1QFLtntlZGZVw6fBPTiTi9WIfG_oLGKVESw3dAXpuaY5xwutxiH-eCqFf1uT6Re_BCzTo2qt4o7X-PBfi_fLMSeRgXjxGe-UCuBnE2n0JXM_-MsRmfeG2bdGf48"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "number11",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "yy",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "user_id",
+							"value": "1",
+							"description": " this field only be taken if user is admin otherwise ignored",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/projects/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"projects",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Project [Final]",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNzZmZWVhOTcwNWI0ODk4NTE5MDZjYzJkMDI4ODU0ZDMwZjI3MjA3M2JkOWNjZDg0NmVkNmU3ZDI2OWQ0ODFjMzQ1ZjczYzJhOWNkZjQxMmIiLCJpYXQiOjE1OTQzNzAxMzAsIm5iZiI6MTU5NDM3MDEzMCwiZXhwIjoxNjI1OTA2MTMwLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.olqJCEJ8f1R0MOxVdeOa-zSy0uRBgvKY9FR4RszgHdfbYmX1CySV3ny53u0ccb7Upv7XAowlAmqNwx3YMQJefIKZdBjh-RL0D30udDySZpegI5IY3XT7-wJaZVl85XB7pbfb6POz2qoxGLo2fs1V1KcGTLXJt4uHe_DvGfHUwDf45KAei99wUkvMoMHy0V-41FGu-1vUGBt9o2IFaNlcqk3mOQhNkbNR1Bh_3pm3Fv_n3baJMoHtQX-nsAlOYTZBZogiTkPqs6eiqvv0lj6VbQxIMC51KPbJ7Bvaaq2QSVj7b-liDvtTMdkkfQLabW6DU7ggCpYY1n3U0OTlQXQPYQ3pwkl4_wrgj6GBEzsKoXMIIfZM-MJE_fv9D4micEw-RpGKKANOdBiMg0SeVhw6oAl1Sgh2O2mjiGpiBqlwo463qHJa7kl_5x6Qo05E9v-g_336U3NI32PjHiGBe5ZIAK0sMBEl7yFkHXYHGFp6lFVs-tX21giONyPsmLxz_p2kVpLmz56GXvM3jw_WCkJhECMzgblvFkNr--egFi7iJr0CKw9g1QFLtntlZGZVw6fBPTiTi9WIfG_oLGKVESw3dAXpuaY5xwutxiH-eCqFf1uT6Re_BCzTo2qt4o7X-PBfi_fLMSeRgXjxGe-UCuBnE2n0JXM_-MsRmfeG2bdGf48"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/projects/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"projects",
+						"6"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
